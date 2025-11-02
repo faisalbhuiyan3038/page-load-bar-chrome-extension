@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Page Load Bar",
+  "version": "1.0",
+  "description": "Adds a minimalistic load progress bar and element counter to each page.",
+  "homepage_url": "https://github.com/faisalbhuiyan3038/page-load-bar",
+  "icons": {
+    "48": "icons/48x48.png",
+    "96": "icons/96x96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/load_progress_bar.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "settings/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/48x48.png"
+    }
+  }
+}

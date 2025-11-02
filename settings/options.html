@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Load Progress Bar Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Load Progress Bar Options</h1>
+        </header>
+
+        <form>
+            <fieldset>
+                <legend>Appearance</legend>
+                <div class="option-row">
+                    <label for="color">Bar Color:</label>
+                    <input type="color" id="color">
+                </div>
+                <div class="option-row">
+                    <label for="isRainbow">Rainbow Mode:</label>
+                    <input type="checkbox" id="isRainbow">
+                </div>
+                <div class="option-row">
+                    <label for="rainbow_size">Rainbow Size:</label>
+                    <input type="range" id="rainbow_size" min="0.1" max="5" step="0.01" value="3">
+                </div>
+                <div class="option-row">
+                    <label for="width">Bar Thickness (px):</label>
+                    <input type="range" id="width" min="1" max="30" step="1">
+                </div>
+                <div class="option-row">
+                    <label for="opacity">Bar Opacity:</label>
+                    <input type="range" id="opacity" min="0.25" max="1" step="0.05">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Behavior</legend>
+                <div class="option-row">
+                    <label for="place">Position:</label>
+                    <select id="place">
+                        <option value="top">Top</option>
+                        <option value="bottom">Bottom</option>
+                    </select>
+                </div>
+                <div class="option-row">
+                    <label for="smooth">Smooth Animation:</label>
+                    <select id="smooth">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="option-row">
+                    <label for="showCounter">Show Element Counter:</label>
+                    <input type="checkbox" id="showCounter">
+                </div>
+            </fieldset>
+
+            <div class="save-row">
+                <button type="submit" id="save">Save</button>
+                <span id="status"></span>
+            </div>
+        </form>
+    </div>
+    
+    <script src="options.js"></script>
+</body>
+</html>
