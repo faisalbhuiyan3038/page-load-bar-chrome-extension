@@ -8,7 +8,10 @@ function saveOptions(e) {
     "opacity": document.querySelector("#opacity").value,
     "place": document.querySelector("#place").value,
     "smooth": document.querySelector("#smooth").value,
-    "showCounter": document.querySelector("#showCounter").checked
+    "showCounter": document.querySelector("#showCounter").checked,
+    "showStatusBar": document.querySelector("#showStatusBar").checked,
+    "statusBarMode": document.querySelector("#statusBarMode").value,
+    "showThirdPartyOnly": document.querySelector("#showThirdPartyOnly").checked
   }).then(() => {
     // Show save confirmation
     var status = document.querySelector("#status");
@@ -29,6 +32,9 @@ function restoreOptions() {
     document.querySelector("#place").value = result.place;
     document.querySelector("#smooth").value = result.smooth;
     document.querySelector("#showCounter").checked = result.showCounter;
+    document.querySelector("#showStatusBar").checked = result.showStatusBar;
+    document.querySelector("#statusBarMode").value = result.statusBarMode;
+    document.querySelector("#showThirdPartyOnly").checked = result.showThirdPartyOnly;
   }
 
   function onError(error) {
@@ -43,7 +49,10 @@ function restoreOptions() {
       opacity: "0.75",
       place: "top",
       smooth: "no",
-      showCounter: true
+      showCounter: true,
+      showStatusBar: true,
+      statusBarMode: "fixed",
+      showThirdPartyOnly: false
   }).then(updateSettings, onError);
 }
 

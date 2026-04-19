@@ -59,6 +59,26 @@
                 </div>
             </fieldset>
 
+            <fieldset>
+                <legend>Status Bar</legend>
+                <div class="option-row">
+                    <label for="showStatusBar">Show Loading Status Bar:</label>
+                    <input type="checkbox" id="showStatusBar">
+                </div>
+                <div class="option-row">
+                    <label for="statusBarMode">Status Bar Mode:</label>
+                    <select id="statusBarMode">
+                        <option value="fixed">Fixed — anchored near progress bar</option>
+                        <option value="hover">Hover — follows cursor</option>
+                        <option value="both">Both — fixed + cursor bubble</option>
+                    </select>
+                </div>
+                <div class="option-row">
+                    <label for="showThirdPartyOnly">Show Third-Party Domains Only:</label>
+                    <input type="checkbox" id="showThirdPartyOnly">
+                </div>
+            </fieldset>
+
             <div class="save-row">
                 <button type="submit" id="save">Save</button>
                 <span id="status"></span>
